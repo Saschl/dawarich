@@ -52,7 +52,7 @@ jobs:
         id: docker_meta
         run: |
           VERSION=${GITHUB_REF#refs/tags/}
-          TAGS="freikin/dawarich:${VERSION}"
+          TAGS="saschl/dawarich:${VERSION}"
 
           # Add :rc tag for pre-releases
           if [ "${{ github.event.release.prerelease }}" = "true" ]; then
