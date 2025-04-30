@@ -56,12 +56,12 @@ jobs:
 
           # Add :rc tag for pre-releases
           if [ "${{ github.event.release.prerelease }}" = "true" ]; then
-            TAGS="${TAGS},freikin/dawarich:rc"
+            TAGS="${TAGS},saschl/dawarich:rc"
           fi
 
           # Add :latest tag only if release is not a pre-release
           if [ "${{ github.event.release.prerelease }}" != "true" ]; then
-            TAGS="${TAGS},freikin/dawarich:latest"
+            TAGS="${TAGS},saschl/dawarich:latest"
           fi
 
           echo "tags=${TAGS}" >> $GITHUB_OUTPUT
